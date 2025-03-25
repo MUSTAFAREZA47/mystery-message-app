@@ -1,6 +1,6 @@
 
 import {
-    HTML,
+    Html as HTML,
     Head,
     Font,
     Preview,
@@ -9,7 +9,7 @@ import {
     Section,
     Text,
     Button,
-} from '@react-email'
+} from '@react-email/components'
 
 interface VerificationEmailProps {
     username: string
@@ -27,7 +27,10 @@ export default function VerificationEmail({
                 <Font
                     fontFamily="Roboto"
                     fallbackFontFamily="Verdana"
-                    webFont={{ url: '' }}
+                    webFont={{
+                        url: 'https://https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2',
+                        format: 'woff2',
+                    }}
                     fontWeight={400}
                     fontStyle="normal"
                 />

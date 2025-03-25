@@ -2,7 +2,8 @@ import dbConnect from '@/lib/dbConnect'
 
 import { sendVerificationEmail } from '@/helpers/sendVerificationEmail'
 import UserModel from '@/model/User.model'
-import { todo } from 'node:test'
+import bcrypt from 'bcryptjs'
+
 
 export async function POST(request: Request) {
     await dbConnect()
@@ -16,7 +17,7 @@ export async function POST(request: Request) {
         })
 
         const verifyCode = Math.floor(
-            100000 + Math.random() * 999999,
+            100000 + Math.random() * 900000,
         ).toString()
 
         if (existingUserVerifiedByUsername) {
